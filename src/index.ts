@@ -4,7 +4,7 @@ import { chromium } from "playwright";
     const browser = await chromium.launch({headless: false});
     const page = await browser.newPage();
 
-    await page.goto('https://google.com');
+    await page.goto('https://apple.com');
 
     await page.waitForSelector('nav#globalnav');
 
