@@ -1,0 +1,24 @@
+{
+  "name": "e2e_testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhii-123/e2e_testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serhii-123/e2e_testing/issues"
+  },
+  "homepage": "https://github.com/serhii-123/e2e_testing#readme",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.15.3",
+    "playwright": "^1.52.0"
+  }
+}
