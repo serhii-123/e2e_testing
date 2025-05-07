@@ -16,7 +16,7 @@ describe('checking navigation and elements', async () => {
     const expectedItems: string[] = [
         'MacBook Air', 'MacBook Pro', 'iMac', 'Mac mini',
         'Mac Studio', 'Mac Pro', 'Help Me Choose\na Mac', 'Compare\nMac models',
-        'Displays', 'Accessories\nfor Mac', 'Sequoia', 'Shop Ma'
+        'Displays', 'Accessories\nfor Mac', 'Sequoia', 'Shop Mac'
     ];
     const itemSelector: string = '#chapternav .chapternav-label';
 
