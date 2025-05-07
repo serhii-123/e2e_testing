@@ -18,6 +18,12 @@ export default defineConfig({
                 ...devices['Desktop Chrome'],
                 headless: true
             }
+        }, {
+            name: 'edge',
+            use: {
+                ...devices['Desktop Edge'],
+                headless: true
+            }
         }
     ],
     reporter: [['html', { open: 'never' }]]
