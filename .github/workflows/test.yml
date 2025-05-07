@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: npm i
+      - run: npx playwright install
       - run: npm run test
