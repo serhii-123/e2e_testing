@@ -1,3 +1,7 @@
+#mine
+dist/
+screenshots/
+
 # Logs
 logs
 *.log
