@@ -7,11 +7,17 @@ export default defineConfig({
     projects: [
         {
             name: 'firefox',
-            use: {...devices['Desktop Firefox']}
+            use: {
+                ...devices['Desktop Firefox'],
+                headless: true
+            }
         },
         {
             name: 'chrome',
-            use: {...devices['Desktop Chrome']}
+            use: {
+                ...devices['Desktop Chrome'],
+                headless: true
+            }
         }
     ],
     reporter: [['html', { open: 'never' }]]
