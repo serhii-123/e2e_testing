@@ -1,6 +1,8 @@
 #mine
 dist/
 screenshots/
+playwright-report/
+test-results/
 
 # Logs
 logs

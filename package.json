@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "test": "npx vitest run"
+    "test": "npx playwright test --headed"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/serhii-123/e2e_testing#readme",
   "description": "",
   "dependencies": {
+    "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.3",
     "esbuild": "^0.25.3",
     "playwright": "^1.52.0",
