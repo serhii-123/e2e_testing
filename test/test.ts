@@ -5,32 +5,37 @@ let browser: ChromiumBrowser;
 let page: Page;
 
 beforeAll(async () => {
-    browser = await chromium.launch({headless: true});
+    browser = await chromium.launch({headless: false});
     page = await browser.newPage();
 
-    await page.goto('https://apple.com');
-}, 20000);
+    await page.goto('https://www.apple.com/mac/.');
+}, 30000);
 
 
 describe('checking navigation and elements', async () => {
+    const expectedItems: string[] = [
+        'MacBook Air', 'MacBook Pro', 'iMac', 'Mac mini',
+        'Mac Studio', 'Mac Pro', 'Help Me Choose\na Mac', 'Compare\nMac models',
+        'Displays', 'Accessories\nfor Mac', 'Sequoia', 'Shop Mac'
+    ];
+    const itemSelector: string = '#chapternav .chapternav-label';
+
     it('should be main navigation', async () => {
-        await page.waitForSelector('nav#globalnav');
+        await page.waitForSelector('nav#chapternav');
 
-        const navbar: string | null = await page.locator('nav#globalnav').getAttribute('id');
+        const navbar: string | null = await page.locator('nav#chapternav').getAttribute('id');
 
-        expect(navbar).toBe('globalnav');
+        expect(navbar).toBe('chapternav');
     });
     
-    it('should be elements in navigation', async () => {
-        const expectedItems: string[] = [
-            'Apple', 'Store', 'Mac', 'iPad', 'iPhone',
-            'Watch', 'Vision', 'AirPods', 'TV & Home',
-            'Entertainment', 'Accessories', 'Support'
-        ];
-        const navItems: string [] = await page.locator('.globalnav-link-text').allInnerTexts();
-        console.log(navItems);
-
-        expect(navItems).toEqual(expectedItems);
+    expectedItems.forEach((item: string) => {
+        it(`should be "${item}`, async () => {
+            const items: string[] = await page
+                                        .locator(itemSelector)
+                                        .allInnerTexts();
+    
+            expect(item).toBeOneOf(items);
+        });  
     });
 });
 
