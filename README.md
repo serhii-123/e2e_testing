@@ -10,5 +10,5 @@
 Type the following command to run tests
 `npm run test`
 # Structure
-`test` - a folder containing a single file with all the tests
+`test` - a folder containing a single file with all the tests  
 `playwright.config.ts` - a configuration file for setting up Playwright
