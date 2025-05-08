@@ -23,7 +23,7 @@ test.describe('should be navigation and its items', () => {
 
     expectedItems.forEach((item: string) => {
 
-        test(`should be "${item}`, async ({ page }) => {
+        test(`should be "${item}`, async ({ page, browserName }) => {
             try {
                 const items: string[] = await page
                                                 .locator(itemSelector)
@@ -31,9 +31,10 @@ test.describe('should be navigation and its items', () => {
                 
                 expect(items).toContain(item);
             } catch(e) {
+                const imgPath: string = `./screenshots/${item.replace(/\s/g, '_')}_${browserName}_failed_test.png`
                 console.error('An error occured. Taking screenshot...');
                 
-                await page.screenshot({ path: `./screenshots/${item}_failed_test.png`});
+                await page.screenshot({ path: imgPath });
 
                 throw e;
             }
