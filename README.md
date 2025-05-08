@@ -7,7 +7,7 @@
 3) Run the following command to install required browsers  
 `npx playwright install`
 # Running tests
-Type the following command to run tests
+Type the following command to run tests  
 `npm run test`
 # Structure
 `test` - a folder containing a single file with all the tests  
