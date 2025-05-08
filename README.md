@@ -1,10 +1,10 @@
 # Startup
 
-1) Run the following command in the terminal to download the project
+1) Run the following command in the terminal to download the project  
 `git clone https://github.com/serhii-123/e2e_testing`
-2) Run the following command to download dependencies
+2) Run the following command to download dependencies  
 `npm i`
-3) Run the following command to install required browsers
+3) Run the following command to install required browsers  
 `npx playwright install`
 # Running tests
 Type the following command to run tests
